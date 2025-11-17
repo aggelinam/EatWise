@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eat Wise - Αρχική</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="header-inner"> <!-- Κρατά λογότυπο και τίτλο στην ίδια σειρά -->
+            <img src="assets/media/logo.jpg" alt="Λογότυπο EatWise" class="header-logo">
+            <h1 class="header-title">Eat Wise</h1>
+        </div>
+        <nav class="main-nav"><!-- Μενού πλοήγησης -->
+            <ul>
+                <li><a href="index.html">Αρχική</a></li>
+                <li><a href="lifestyle.html">Lifestyle</a></li>
+                <li><a href="recipes.html">Συνταγές</a></li>
+                <li><a href="multimedia.html">Πολυμέσα</a></li>
+                <li><a href="contact.html">Επικοινωνία & Σχετικά</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN: περιεχομενο -->
+<main class="site-main">
+    <div class="container">
+        <!-- θέμα σαιτ -->
+        <section class="intro">
+            <h2 class="main-title">Protein Meals</h2>
+            <p class="subtitle">
+                Ιστότοπος αφιερωμένος στη σημασία της πρωτεΐνης και στη σωστή διατροφή.
+                Μάθε πώς η πρωτεΐνη συμβάλλει στη δύναμη, την ενέργεια και την ευεξία.
+            </p>
+            <p class="tagline">Φάε έξυπνα. <em>Ζήσε δυνατά.</em></p>
+        </section>
+
+        <!-- Φωτογραφίες + κουμπί -->
+        <section class="preview">
+            <div class="preview-images">
+                <img src="assets/media/protein-smoothie.jpg" alt="Πρωτεϊνικό smoothie">
+                <img src="assets/media/dumbbell.jpg" alt="Προπόνηση με βάρη">
+            </div>
+
+            <a href="recipes.html" class="main-button">Δες Συνταγές</a>
+            <p class="quote">Η πρωτεΐνη είναι το δομικό στοιχείο της ζωής.</p>
+        </section>
+
+        <!--πάμε στο preview-->
+        <section class="preview-cards container">
+            <h2 class="sr-only">Προεπισκόπηση</h2>
+            <a class="p-card" href="recipes.html#breakfast">
+                <img src="assets/media/breakfast-preview.jpg" alt="Πρωινά">
+                <div class="p-body">
+                    <h3>Πρωινά</h3>
+                    <p>Ιδέες για ενέργεια από νωρίς.</p>
+                </div>
+            </a>
+            <a class="p-card" href="recipes.html#mains">
+                <img src="assets/media/mains-preview.jpg" alt="Κυρίως">
+                <div class="p-body">
+                    <h3>Κυρίως</h3>
+                    <p>Ισορροπημένα γεύματα για δύναμη και αποκατάσταση.</p>
+                </div>
+            </a>
+            <!-- PREVIEW Κάρτα: Γλυκά & Σνακ -->
+            <a class="p-card" href="recipes.html#snacks">
+                <img src="assets/media/snacks-preview.jpg" alt="Γλυκά & Σνακ">
+                <div class="p-body">
+                    <h3>Γλυκά & Σνακ</h3>
+                    <p>Πρωτεϊνικά γλυκά χωρίς ενοχές.</p>
+                </div>
+            </a>
+
+        </section>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-top">
+            <img class="footer-logo" src="assets/media/logo.jpg" alt="Λογότυπο Eat Wise">
+            <p class="footer-copy">© 2025 Protein Meals</p>
+            <a class="footer-link" href="privacy.html">Πολιτική Απορρήτου</a>
+        </div>
+        <p class="footer-credit">Δημιουργήθηκε για το μάθημα Εφαρμογές Διαδικτύου</p>
+    </div>
+</footer>
+
+<!-- POPUP ΠΟΛΙΤΙΚΗΣ ΑΠΟΡΡΗΤΟΥ -->
+<div id="privacy-popup" class="privacy-popup">
+    <div class="privacy-box">
+        <p>Made by Αγγελική-Ελένη Μαβόγλου</p>
+        <button id="close-privacy">Κλείσιμο</button>
+    </div>
+</div>
+
+<script>
+    const popup = document.getElementById('privacy-popup');
+    const closeBtn = document.getElementById('close-privacy');
+    const privacyLink = document.querySelector('.footer-link');
+
+    privacyLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        popup.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+</script>
+</body>
+</html>

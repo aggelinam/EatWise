@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eat Wise - Επικοινωνία & Σχετικά</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- HEADER (ίδιο με τις άλλες σελίδες) -->
+<header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            <img src="assets/media/logo.jpg" alt="Λογότυπο EatWise" class="header-logo">
+            <h1 class="header-title">Eat Wise</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Αρχική</a></li>
+                <li><a href="lifestyle.html">Lifestyle</a></li>
+                <li><a href="recipes.html">Συνταγές</a></li>
+                <li><a href="multimedia.html">Πολυμέσα</a></li>
+                <li><a class="is-active" href="contact.html">Επικοινωνία & Σχετικά</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main class="site-main">
+    <div class="container contact-page">
+        <h1 class="page-title">Contact / About Me</h1>
+        <p class="subtitle smaller">Στείλε μου μήνυμα ή μάθε λίγα πράγματα για εμένα πιο κάτω.</p>
+
+        <section class="contact-grid">
+            <div class="contact-divider" aria-hidden="true"></div>
+
+            <!-- Αριστερά: Φόρμα -->
+            <div class="contact-col">
+                <h2 class="contact-h">Contact</h2>
+
+                <form class="contact-form" action="#" method="post">
+                    <label for="name">Όνομα</label>
+                    <input id="name" name="name" type="text" placeholder="Το όνομά σου">
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="name@example.com">
+
+                    <label for="msg">Μήνυμα</label>
+                    <textarea id="msg" name="message" placeholder="Γράψε το μήνυμά σου…"></textarea>
+
+                    <div class="contact-actions">
+                        <button class="btn" type="submit">Αποστολή</button>
+                        <small>Απαντώ συνήθως εντός 24 ωρών.</small>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Δεξιά: About -->
+            <div class="contact-col">
+                <h2 class="contact-h">About Me</h2>
+
+                <!-- Φωτογραφία: τετράγωνη με απαλές γωνίες -->
+                <img class="about-img" src="assets/media/me.jpg" alt="Αγγελίνα Μαβόγλου">
+
+                <p class="bio">
+                    Ονομάζομαι <strong>Αγγελίνα Μαβόγλου</strong>. Είμαι στο <strong>3ο έτος</strong> του τμήματος
+                    <strong>Ψηφιακών Συστημάτων</strong> στη <strong>Λάρισα</strong>. Μου αρέσουν
+                    η <strong>πληροφορική</strong>, η <strong>διατροφή</strong> και η <strong>γυμναστική</strong>.
+                </p>
+
+                <!-- Πίνακας βασικών πληροφοριών -->
+                <table class="info-table">
+                    <caption>Βασικές Πληροφορίες</caption>
+                    <tr>
+                        <th>Ιδιότητα</th>
+                        <td>Φοιτήτρια Ψηφιακών Συστημάτων</td>
+                    </tr>
+                    <tr>
+                        <th>Ενδιαφέροντα</th>
+                        <td>Υγιεινή διατροφή, προπόνηση, τεχνολογία</td>
+                    </tr>
+                    <tr>
+                        <th>LinkedIn</th>
+                        <td>
+                            <a href="https://www.linkedin.com/in/angeliki-eleni-mavoglou-443876200/" target="_blank" rel="noopener">
+                                linkedin.com/in/angeliki-eleni-mavoglou-443876200
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- FOOTER (ίδιο με τις άλλες σελίδες) -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-top">
+            <img class="footer-logo" src="assets/media/logo.jpg" alt="Λογότυπο Eat Wise">
+            <p class="footer-copy">© 2025 Protein Meals</p>
+            <a class="footer-link" href="privacy.html">Πολιτική Απορρήτου</a>
+        </div>
+        <p class="footer-credit">Δημιουργήθηκε για το μάθημα Εφαρμογές Διαδικτύου</p>
+    </div>
+</footer>
+
+<!-- POPUP -->
+<div id="privacy-popup" class="privacy-popup">
+    <div class="privacy-box">
+        <p>Made by Αγγελική-Ελένη Μαβόγλου</p>
+        <button id="close-privacy">Κλείσιμο</button>
+    </div>
+</div>
+
+<script>
+    const popup = document.getElementById('privacy-popup');
+    const closeBtn = document.getElementById('close-privacy');
+    const privacyLink = document.querySelector('.footer-link');
+
+    privacyLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        popup.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+</script>
+</body>
+</html>

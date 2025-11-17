@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eat Wise – Πολυμέσα</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        .gallery { text-align: left; }
+        .gallery h2 { font-size: 28px; margin: 6px 0 6px; }
+        .gallery p { margin: 0 0 14px; }
+        .thumbs {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 12px 28px;
+        }
+        .thumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .thumb img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #00000022;
+            background: #fff;
+        }
+        .thumb span {
+            text-decoration: underline;
+            color: #1a0dab;
+            font-size: 16px;
+        }
+        @media (max-width: 900px) { .thumbs { grid-template-columns: repeat(2,1fr);} }
+        @media (max-width: 560px) { .thumbs { grid-template-columns: 1fr; } }
+        /* Αφαιρεί border από iframe */
+        .video-wrap iframe { border: none; }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            <img src="assets/media/logo.jpg" alt="Λογότυπο Eat Wise" class="header-logo">
+            <h1 class="header-title">Eat Wise</h1>
+        </div>
+
+        <nav class="main-nav" aria-label="Κύριο μενού">
+            <ul>
+                <li><a href="index.html">Αρχική</a></li>
+                <li><a href="lifestyle.html">Lifestyle</a></li>
+                <li><a href="recipes.html">Συνταγές</a></li>
+                <li><a class="is-active" href="multimedia.html">Πολυμέσα</a></li>
+                <li><a href="contact.html">Επικοινωνία &amp; Σχετικά</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="site-main">
+    <div class="container">
+
+        <!-- Βίντεο μικρότερο -->
+        <section class="media-hero wide">
+            <div class="video-wrap small">
+                <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/mbnoneYrro8?si=FNzh7j7oGXOKdlzO"
+                        title="Πουτίγκα Πρωτεΐνης με Γεύση Σοκολάτα"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <h2 class="media-title">Πουτίγκα Πρωτεΐνης με Γεύση Σοκολάτα</h2>
+        </section>
+
+        <!-- ===== Gallery Σνακ ===== -->
+        <section class="gallery">
+            <h2 class="section-title">Σνακ Υψηλής Πρωτεΐνης</h2>
+            <p class="section-subtitle">Δύο τριάδες από αγαπημένα σνακ — πάτα πάνω τους για να δεις τη φωτογραφία σε μεγάλο μέγεθος.</p>
+
+            <div class="thumbs">
+                <!-- 1η τριάδα -->
+                <a class="thumb" href="assets/media/egg_white_roll-br.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/media/egg_white_roll-br.jpg" alt="Ρολά Ομελέτας (Ασπραδιών)">
+                    <span>Ρολά Ομελέτας (Ασπραδιών)</span>
+                </a>
+
+                <a class="thumb" href="assets/media/spicy_chicken-m.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/media/spicy_chicken-m.jpg" alt="Πικάντικο Κοτόπουλο">
+                    <span>Πικάντικο Κοτόπουλο</span>
+                </a>
+
+                <a class="thumb" href="assets/media/crepe_roll-sn.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/media/crepe_roll-sn.jpg" alt="Ρολά Κρέπας">
+                    <span>Ρολά Κρέπας</span>
+                </a>
+
+                <!-- 2η τριάδα -->
+                <a class="thumb" href="assets/media/kagianas-br.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/media/kagianas-br.jpg" alt="Καγιανάς">
+                    <span>Καγιανάς</span>
+                </a>
+
+                <a class="thumb" href="assets/media/burrito-br.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/media/burrito-br.jpg" alt="Πρωινό Burrito">
+                    <span>Πρωινό Burrito</span>
+                </a>
+
+                <a class="thumb" href="assets/media/chocolate-pudding-sn.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/media/chocolate-pudding-sn.jpg" alt="Πουτίγκα Σοκολάτας">
+                    <span>Πουτίγκα Σοκολάτας</span>
+                </a>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-top">
+            <img class="footer-logo" src="assets/media/logo.jpg" alt="Λογότυπο Eat Wise">
+            <p class="footer-copy">© 2025 Protein Meals</p>
+            <a class="footer-link" href="#" id="privacyLink">Πολιτική Απορρήτου</a>
+        </div>
+        <p class="footer-credit">Δημιουργήθηκε για το μάθημα Εφαρμογές Διαδικτύου</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('privacyLink')?.addEventListener('click', function(e){
+        e.preventDefault();
+        alert('Made by Αγγελική-Ελένη Μαβόγλου');
+    });
+</script>
+
+</body>
+</html>
